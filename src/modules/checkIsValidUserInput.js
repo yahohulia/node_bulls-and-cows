@@ -15,22 +15,16 @@ function checkIsValidUserInput(userInput) {
   }
 
   if (!userInput || userInput.length !== 4) {
-    console.log('Input length must be 4.\n');
-
     return false;
   }
 
   if (isNaN(userInput)) {
-    console.log('Input must be a number.\n');
-
     return false;
   }
 
   const uniqueChars = new Set(userInput.toString());
 
   if (uniqueChars.size !== 4) {
-    console.log('Each number must be unique.\n');
-
     return false;
   }
 
